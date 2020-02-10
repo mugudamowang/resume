@@ -1,5 +1,5 @@
 body{
-    background-color: black ;
+    background-color: EFEFEF ;
     color: grey;
     margin: 0px;
 }
@@ -11,8 +11,15 @@ a{
     display: block;
     clear: both;
 }
+.topNavBar-inner{
+    padding: 0 17px;
+}
 .topNavBar{
     padding: 20px 17px 20px 17px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 .topNavBar .logo{
     color: #9a9da2 ;
@@ -40,6 +47,7 @@ a{
 }   
 .topNavBar nav ul li a{
     font-size: 13px;
+    font-weight: bold;
     color: rgba(255, 255, 255, 0.7);
     border-bottom: 3px solid transparent;
     display: block;
@@ -47,4 +55,49 @@ a{
 }
 .topNavBar nav ul li a:hover{
     border-bottom: 3px solid red;
+}
+.banner{
+    height: 515px;
+    background-image: url(./bg.png);
+    background-position: center center;
+    background-size: cover;
+}
+.banner .mask{
+    height:515px;
+    background-color: rgba(44, 51, 64, 0.6);
+    /* 遮罩效果：添加颜色滤镜lol */
+}
+.myCard{
+    border: 3px solid red;
+    max-width: 940px;
+    /* 940以下会自动适应 */
+    margin-left: auto;
+    margin-right: auto;
+    /* div居中 */
+    background-color: white;
+}
+.myCard .welcome{
+    background-color: #E8676B;
+    color: white;
+    padding: 4px 16px;
+    display: inline-block;
+    line-height: 22px;/*明确下行号，防止不同机器出错；*/   
+    position: relative;
+    /* width: 70px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center; */
+    /* width,height内联元素不接受 */
+}
+.myCard .triangle{
+    left: 5px;
+    top: 100%;
+    /* 本元素的上边缘到父级元素的  100%*本元素高度 */
+    display: block;/*span变成div*/
+    position: absolute;
+    border: 10px solid transparent;
+    width: 0px;
+    height: 0px;
+    border-top-width: 0px;
+    border-left-color:#E8676B;
 }
