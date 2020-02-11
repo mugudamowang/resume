@@ -1,5 +1,5 @@
 body{
-    background-color: EFEFEF ;
+    background-color: #efefef ;
     color: grey;
     margin: 0px;
 }
@@ -73,7 +73,8 @@ a{
     /* 遮罩效果：添加颜色滤镜lol */
 }
 .myCard{
-    border: 3px solid red;
+    position: relative;
+    top: -320px;
     max-width: 940px;
     /* 940以下会自动适应 */
     margin-left: auto;
@@ -151,15 +152,20 @@ a{
     text-align: center;
 }
 .myCard footer.media>a{
-    border: #9a9da2 1px solid;
+    margin: 16px 16px;
     display: inline-block;
-    border-radius: 50%;
+    border: transparent 8px solid;
 }
 .myCard svg{
-    /* border-radius: 50%;
-    border: 1px solid #9a9da2; */
+
     vertical-align: top;
     width: 30px;
     height: 30px;
     color: white;
+}
+.myCard footer.media>a:hover{
+    
+    border: #d05c5f 8px solid;
+    border-radius: 50%;
+    background-color:#d05c5f;
 }
