@@ -3,8 +3,13 @@ body{
     color: grey;
     margin: 0px;
 }
+h1,h2,h3,h4,h5,hr,p{
+    padding: 0px;
+    margin: 0px;
+}
 a{
-    text-decoration: none;    
+    text-decoration: none;   
+    color: rgba(255, 255, 255, 0.7);
 }
 .clearfix::after{
     content: '';
@@ -75,8 +80,10 @@ a{
     margin-right: auto;
     /* div居中 */
     background-color: white;
+    
 }
 .myCard .welcome{
+    margin-bottom: 26px;
     background-color: #E8676B;
     color: white;
     padding: 4px 16px;
@@ -100,4 +107,59 @@ a{
     height: 0px;
     border-top-width: 0px;
     border-left-color:#E8676B;
+}
+.myCard .pictureAndText .picture{
+    float: left;
+}
+
+.myCard .pictureAndText .text{
+    float: left;
+    margin-left: 65px;
+    width: 471px;
+}
+
+.myCard .pictureAndText{
+    padding: 50px;
+}
+.myCard p{
+    margin: 3px;
+}
+.myCard hr{
+    margin:25px 0px;
+    height: 0;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.myCard dd,dt{
+    display: block;
+    float: left;
+    margin: 14px 0px;
+}
+.myCard dt{
+    width: 30%;
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+}
+
+.myCard dd{
+    width: 50%;
+    color: grey;
+}
+.myCard footer.media{
+    background-color: #e8676b;
+    text-align: center;
+}
+.myCard footer.media>a{
+    border: #9a9da2 1px solid;
+    display: inline-block;
+    border-radius: 50%;
+}
+.myCard svg{
+    /* border-radius: 50%;
+    border: 1px solid #9a9da2; */
+    vertical-align: top;
+    width: 30px;
+    height: 30px;
+    color: white;
 }
