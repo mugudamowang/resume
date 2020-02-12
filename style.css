@@ -32,12 +32,9 @@ a{
     font-size: 30px;
     font-weight: bold;
 }
-.topNavBar .logo .rs{
-    color: #e8676b;
+.topNavBar .logo .ji{
+    color: #9974f0;
     padding-right: 4px;
-}
-.topNavBar .logo .card{
-
 }
 .topNavBar nav ul{
     margin: 0;
@@ -69,12 +66,16 @@ a{
 }
 .banner .mask{
     height:515px;
-    background-color: rgba(44, 51, 64, 0.6);
+    background-color: rgba(77, 72, 110, 0.6);
     /* 遮罩效果：添加颜色滤镜lol */
 }
-.myCard{
+main{
     position: relative;
     top: -320px;
+}
+.myCard{
+    border-radius: 5px;
+    box-shadow:  0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     max-width: 940px;
     /* 940以下会自动适应 */
     margin-left: auto;
@@ -83,9 +84,35 @@ a{
     background-color: white;
     
 }
+
+.myCard .saySomething{
+    font-size: small;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    background-color: white;
+    color: #f4b0c7;
+    padding: 6px 10px;
+    display: inline-block;
+    line-height: 22px;/*明确下行号，防止不同机器出错；*/   
+    position: absolute;
+    top: 16%;
+    left: 22%;
+    
+}
+.myCard .triangleWhite{
+    left: 50px;
+    top: 100%;
+    /* 本元素的上边缘到父级元素的  100%*本元素高度 */
+    display: block;/*span变成div*/
+    position: absolute;
+    border: 10px solid transparent;
+    width: 0px;
+    height: 0px;
+    border-top-width: 0px;
+    border-right-color: white;
+}
 .myCard .welcome{
     margin-bottom: 26px;
-    background-color: #E8676B;
+    background-color: #413c69;
     color: white;
     padding: 4px 16px;
     display: inline-block;
@@ -107,7 +134,7 @@ a{
     width: 0px;
     height: 0px;
     border-top-width: 0px;
-    border-left-color:#E8676B;
+    border-left-color: #413c69;
 }
 .myCard .pictureAndText .picture{
     float: left;
@@ -148,13 +175,14 @@ a{
     color: grey;
 }
 .myCard footer.media{
-    background-color: #e8676b;
+    background-color: #413c69;
     text-align: center;
 }
 .myCard footer.media>a{
     margin: 16px 16px;
     display: inline-block;
     border: transparent 8px solid;
+    transition: all 0.3s linear;
 }
 .myCard svg{
 
@@ -162,10 +190,35 @@ a{
     width: 30px;
     height: 30px;
     color: white;
+    
 }
 .myCard footer.media>a:hover{
     
-    border: #d05c5f 8px solid;
+    border: #f4b0c7 8px solid;
     border-radius: 50%;
-    background-color:#d05c5f;
+    background-color:#ad62aa;
+    transition: all 0.3s linear;
+}
+.myCardDownload{
+    color: black;
+    background: transparent;
+    text-align: center;
+    margin: 30px 0px;
+}
+.myCardDownload a{
+    
+    display: inline-block;
+    color: #3d4451 !important;
+    border: 1px solid #cbcdcf;
+    border-radius: 15px;
+    box-shadow: none;
+    padding: 20px 50px;
+    letter-spacing: 0.05em;
+    transition: all 1s linear;
+}
+
+.myCardDownload a:hover{
+    opacity: 0.95;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.3s linear;
 }
