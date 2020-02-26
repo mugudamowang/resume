@@ -15,7 +15,7 @@ a { text-decoration: none; color: rgba(255, 255, 255, 0.7); }
 .topNavBar nav ul li a { font-size: 13px; font-weight: bold; color: rgba(255, 255, 255, 0.7); border-bottom: 3px solid transparent; display: block; /* li将a包裹时会产生包裹不全的情况，使用block可以解决 */ }
 .topNavBar nav ul li a:hover { border-bottom: 3px solid red; }
 
-.banner { height: 515px; background-image: url(./bg.png); background-position: center center; background-size: cover; }
+.banner { height: 515px; background-image: url(https://i.loli.net/2020/02/26/hOn5rpAwSulENxW.png); background-position: center center; background-size: cover; }
 .banner .mask { height: 515px; background-color: rgba(77, 72, 110, 0.6); /* 遮罩效果：添加颜色滤镜lol */ }
 
 .myCard { border-radius: 5px; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); max-width: 940px; /* 940以下会自动适应 */ margin-left: auto; margin-right: auto; /* div居中 */ background-color: #35363b; }
@@ -55,4 +55,3 @@ dd { width: 50%; color: grey; }
 #site-loading >.radio::before, .radio::after { width:0px;height:0px;content: ''; position: absolute; border-radius: 50%; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; margin: auto; animation: s 1.5s ease-in-out infinite; background: radial-gradient(yellow, green, cyan, blue, red); }
 #site-loading >.radio::after { background: radial-gradient(violet, blue, cyan, green, red, ); animation-delay: 0.75s; }
 @keyframes s { 0% { width: 0px; height: 0px; opacity: 1; } 100% { width: 150px; height: 150px; opacity: 0; } }
-        
