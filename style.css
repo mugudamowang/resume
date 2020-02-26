@@ -1,242 +1,58 @@
-body{
-    background-color: #28292e ;
-    color: grey;
-    margin: 0px;
-}
-h1,h2,h3,h4,h5,hr,p{
-    padding: 0px;
-    margin: 0px;
-}
-a{
-    text-decoration: none;   
-    color: rgba(255, 255, 255, 0.7);
-}
-.clearfix::after{
-    content: '';
-    display: block;
-    clear: both;
-}
-.topNavBar-inner{
-    padding: 0 17px;
-}
-.topNavBar{
-    padding: 20px 17px 20px 17px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-.topNavBar .logo{
-    color: #9a9da2 ;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-}
-.topNavBar .logo .ji{
-    color: #9974f0;
-    padding-right: 4px;
-}
-.topNavBar nav ul{
-    margin: 0;
-    padding-top: 14px;
-    list-style-type: none;
-    
-}
-.topNavBar nav ul li{
-    float: left;
-    margin-left: 17px;
-    margin-right: 17px;
-}   
-.topNavBar nav ul li a{
-    font-size: 13px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.7);
-    border-bottom: 3px solid transparent;
-    display: block;
-    /* li将a包裹时会产生包裹不全的情况，使用block可以解决 */
-}
-.topNavBar nav ul li a:hover{
-    border-bottom: 3px solid red;
-}
-.banner{
-    height: 515px;
-    background-image: url(./bg.png);
-    background-position: center center;
-    background-size: cover;
-}
-.banner .mask{
-    height:515px;
-    background-color: rgba(77, 72, 110, 0.6);
-    /* 遮罩效果：添加颜色滤镜lol */
-}
-main{
-    margin-top: -320px;
-    
-}
-.myCard{
-    border-radius: 5px;
-    box-shadow:  0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-    max-width: 940px;
-    /* 940以下会自动适应 */
-    margin-left: auto;
-    margin-right: auto;
-    /* div居中 */
-    background-color: #35363b;
-    
-}
-.myCard .welcome{
-    margin-bottom: 26px;
-    background-color: #9818d6;
-    color: white;
-    padding: 4px 16px;
-    display: inline-block;
-    line-height: 22px;/*明确下行号，防止不同机器出错；*/   
-    position: relative;
-    /* width: 70px;
-    height: 29px;
-    line-height: 29px;
-    text-align: center; */
-    /* width,height内联元素不接受 */
-}
-.myCard .triangle{
-    left: 5px;
-    top: 100%;
-    /* 本元素的上边缘到父级元素的  100%*本元素高度 */
-    display: block;/*span变成div*/
-    position: absolute;
-    border: 10px solid transparent;
-    width: 0px;
-    height: 0px;
-    border-top-width: 0px;
-    border-left-color: #9818d6;
-}
-.myCard .pictureAndText .picture{
-    float: left;
-}
+body { background-color: #28292e; color: grey; margin: 0px; }
+main { margin-top: -320px; }
+h1, h2, h3, h4, h5, hr, p { padding: 0px; margin: 0px; }
+a { text-decoration: none; color: rgba(255, 255, 255, 0.7); } 
+.clearfix::after { content: ''; display: block; clear: both; }
+.icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
 
-.myCard .pictureAndText .text{
-    float: left;
-    margin-left: 65px;
-    width: 471px;
-}
+.topNavBar-inner { padding: 0 17px; }
+.topNavBar { padding: 20px 17px 20px 17px; position: fixed; top: 0; left: 0; width: 100%; }
+.topNavBar .logo { color: #9a9da2; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 30px; font-weight: bold; }
+.topNavBar .logo .ji { color: #9974f0; padding-right: 4px; }
 
-.myCard .pictureAndText{
-    padding: 50px;
-}
-.myCard p{
-    margin: 3px;
-}
-.myCard h1{
-    color: gainsboro;
-}
-.myCard hr{
-    margin:25px 0px;
-    height: 0;
-    border: none;
-    border-bottom: 1px solid grey;
-}
-dd,dt{
-    display: block;
-    float: left;
-    margin: 14px 0px;
-}
-dt{
-    width: 30%;
-    font-weight: bold;
-    font-size: 12px;
-    color: gainsboro;
-}
+.topNavBar nav ul { margin: 0; padding-top: 14px; list-style-type: none; }
+.topNavBar nav ul li { float: left; margin-left: 17px; margin-right: 17px; }
+.topNavBar nav ul li a { font-size: 13px; font-weight: bold; color: rgba(255, 255, 255, 0.7); border-bottom: 3px solid transparent; display: block; /* li将a包裹时会产生包裹不全的情况，使用block可以解决 */ }
+.topNavBar nav ul li a:hover { border-bottom: 3px solid red; }
 
-dd{
-    width: 50%;
-    color: grey;
-}
-.myCard footer.media{
-    background-color: #9818d6   ;
-    text-align: center;
-}
-.myCard footer.media>a{
-    margin: 16px 16px;
-    display: inline-block;
-    border: transparent 8px solid;
-    border-radius: 50%;
-    transition: all 0.3s ease-out;
-}
+.banner { height: 515px; background-image: url(./bg.png); background-position: center center; background-size: cover; }
+.banner .mask { height: 515px; background-color: rgba(77, 72, 110, 0.6); /* 遮罩效果：添加颜色滤镜lol */ }
 
-.myCard footer.media>a:hover{
-    border: #3e206d 8px solid;
-    border-radius: 50%;
-    background-color:#3e206d;
-    transition: all 0.25s ease-in;
-}
-.myCard svg{
+.myCard { border-radius: 5px; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); max-width: 940px; /* 940以下会自动适应 */ margin-left: auto; margin-right: auto; /* div居中 */ background-color: #35363b; }
+.myCard .welcome { margin-bottom: 26px; background-color: #9818d6; color: white; padding: 4px 16px; display: inline-block; line-height: 22px;  position: relative;  }
+.myCard .triangle { left: 5px; top: 100%; /* 本元素的上边缘到父级元素的  100%*本元素高度 */ display: inline-block; /*span变成div*/ position: absolute; border: 10px solid transparent; width: 0px; height: 0px; border-top-width: 0px; border-left-color: #9818d6; }
+.myCard .pictureAndText .picture { float: left; }
+.myCard .pictureAndText .text { float: left; margin-left: 65px; width: 471px; }
+.myCard .pictureAndText { padding: 50px; }
+.myCard p { margin: 3px; }
+.myCard h1 { color: gainsboro; }
+.myCard hr { margin: 25px 0px; height: 0; border: none; border-bottom: 1px solid grey; }
 
-    vertical-align: top;
-    width: 30px;
-    height: 30px;
-    color: white;
-    
-}
-.myCardDownload{
-    color: black;
-    text-align: center;
-    margin: 88px 0px;
-}
-.myCardDownload a{
-    background-color: aliceblue;
-    display: inline-block;
-    color: #3d4451 !important;
-    border: 1px solid #cbcdcf;
-    border-radius: 15px;
-    box-shadow: none;
-    padding: 20px 50px;
-    letter-spacing: 0.05em;
-    transition: all 0.5s linear;
-}
+.myCard .text > dl > dd, dt { display: block; float: left; margin: 14px 0px; }
+dt { width: 30%; font-weight: bold; font-size: 12px; color: gainsboro; }
+dd { width: 50%; color: grey; }
 
-.myCardDownload a:hover{
-    opacity: 0.5;
-    padding: 20px 48px;
-    background-color: #fffeff;
-    box-shadow: 0 0px 80px 0 rgba(255, 255, 255, 0.18);
-    transition: all 0.28s linear;
-}
+.myCard footer.media { background-color: #9818d6; text-align: center; }
+.myCard footer.media>a { margin: 16px 16px; display: inline-block; border: transparent 8px solid; border-radius: 50%; transition: all 0.3s ease-out; }
+.myCard footer.media>a:hover { border: #3e206d 8px solid; border-radius: 50%; background-color: #3e206d; transition: all 0.25s ease-in; }
+.myCard svg { vertical-align: top; width: 30px; height: 30px; color: white; }
 
-.skills .skillsInner{
-    display: block;
-    max-width: 950px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.skills .skillsInner>h2{
-    text-align: center;
-    font-size: 35px;
-    padding: 50px;
-}
-.skills .skillsCard{
-    border-radius: 5px;
+.myCardDownload { color: black; text-align: center; margin: 88px 0px; }
+.myCardDownload a { background-color: aliceblue; display: inline-block; color: #3d4451 !important; border: 1px solid #cbcdcf; border-radius: 15px; box-shadow: none; padding: 20px 50px; letter-spacing: 0.05em; transition: all 0.5s linear; }
+.myCardDownload a:hover { opacity: 0.5; padding: 20px 48px; background-color: #fffeff; box-shadow: 0 0px 80px 0 rgba(255, 255, 255, 0.18); transition: all 0.28s linear; }
 
-    padding: 10px 25px;
-    background-color: #35363b;
-    box-shadow:  0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-}
-.skills .skillsCard dt{ 
-    font-size: medium;
-    width: 38%;
-    margin: 20px 50px;
-    position: relative;
-}
-.lines{
-    display: block;
-    position: absolute;
-    border-radius: 5px;
-    border: 2px solid rgb(211, 19, 211);
-}
-.linesBottom{
-    display: block;
-    position: absolute;
-    border-radius: 8px;
-    width: 100%;
-    border: 2px solid rgba(31, 6, 31, 0.609);
-}
+.skills .skillsInner { display: block; max-width: 950px; margin-left: auto; margin-right: auto; }
+.skills .skillsInner>h2 { text-align: center; font-size: 35px; padding: 50px; }
+.skills .skillsCard { border-radius: 5px; padding: 10px 25px; background-color: #35363b; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
+.skills .skillsCard dt { font-size: medium; width: 38%; margin: 20px 50px; position: relative; }
 
+.skills .skillsCard   dl  .lines { display: block; position: absolute; border-radius: 5px; border: 2px solid rgb(211, 19, 211); }
+
+.linesBottom { display: block; position: absolute; border-radius: 8px; width: 100%; border: 2px solid rgba(31, 6, 31, 0.609); }
+
+#site-loading{  z-index: 1; position: fixed; top: 0; left: 0; right: 0; bottom:0; width: 100%; height: 100%; background: white ; }
+#site-loading > .loading { width: 75px; height: 75px; border: 1px solid transparent; box-shadow: 0px 0px 15px 5px purple; border-radius: 50%; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; margin: auto; }
+#site-loading >.radio::before, .radio::after { width:0px;height:0px;content: ''; position: absolute; border-radius: 50%; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; margin: auto; animation: s 1.5s ease-in-out infinite; background: radial-gradient(yellow, green, cyan, blue, red); }
+#site-loading >.radio::after { background: radial-gradient(violet, blue, cyan, green, red, ); animation-delay: 0.75s; }
+@keyframes s { 0% { width: 0px; height: 0px; opacity: 1; } 100% { width: 150px; height: 150px; opacity: 0; } }
+        

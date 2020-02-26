@@ -5,19 +5,13 @@
     <title>this is my cv</title>
     <link rel="stylesheet" href="style.css">
     <script src="//at.alicdn.com/t/font_1637235_2lfaz92j8h2.js"></script>
-    <style type="text/css">
-        .icon {
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
-    </style>
 </head>
 
 <body>
-
+    <div id="site-loading">
+        <div class="radio"></div>
+        <img class='loading' src="https://i.loli.net/2020/02/26/ZbX25CoDWj7yzIt.gif" />
+    </div>
     <div class="topNavBar">
         <div class="topNavBar-inner" clearfix>
             <a class="logo" href="#" alt="logo" style="float: left">
@@ -97,7 +91,8 @@
             <h2>SKILLS</h2>
             <div class="skillsCard">
                 <dl class="clearfix">
-                    <dt>Html 5 &amp; CSS 3<span class="linesBottom"></span><span class="lines" style="width: 70%;"></span></dt>
+                    <dt>Html 5 &amp; CSS 3<span class="linesBottom"></span><span class="lines"
+                            style="width: 70%;"></span></dt>
                     <dt>Javascript<span class="linesBottom"></span><span class="lines" style="width: 66%;"></span></dt>
                     <dt>Jquery<span class="linesBottom"></span><span class="lines" style="width: 80%;"></span></dt>
                     <dt>Vue<span class="linesBottom"></span><span class="lines" style="width: 55%;"></span></dt>
@@ -123,6 +118,12 @@
             <div class="small"></div>
         </div>
     </section>
+    <script>
+        setTimeout(function(){
+            var element = document.getElementById('site-loading');
+            element.parentNode.removeChild(element);
+        },3000)
+    </script>
 </body>
 
 </html>
