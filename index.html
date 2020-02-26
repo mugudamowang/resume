@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    
     <title>this is my cv</title>
     <link rel="stylesheet" href="style.css">
     <script src="//at.alicdn.com/t/font_1637235_2lfaz92j8h2.js"></script>
@@ -12,7 +13,7 @@
         <div class="radio"></div>
         <img class='loading' src="https://i.loli.net/2020/02/26/ZbX25CoDWj7yzIt.gif" />
     </div>
-    <div class="topNavBar">
+    <div id = 'topNavBar' class="topNavBar">
         <div class="topNavBar-inner" clearfix>
             <a class="logo" href="#" alt="logo" style="float: left">
                 <span class="ji">JI</span><span>beauty</span>
@@ -123,6 +124,14 @@
             var element = document.getElementById('site-loading');
             element.parentNode.removeChild(element);
         },2000)
+        
+        window.onscroll = function(){
+            if(window.scrollY > 0){
+                topNavBar.classList.add('sticky')
+            }else{
+                topNavBar.classList.remove('sticky')
+            }
+        }
     </script>
 </body>
 
