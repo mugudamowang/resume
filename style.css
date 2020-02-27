@@ -1,20 +1,25 @@
-body { background-color: #28292e; color: grey; margin: 0px; }
+body { font-family: Arial, Helvetica, sans-serif;background-color: #28292e; color: grey; margin: 0px; }
 main { margin-top: -320px; }
-h1, h2, h3, h4, h5, hr, p { padding: 0px; margin: 0px; }
+h1, h2, h3, h4, h5, hr, p ,li, ul{ padding: 0px; margin: 0px; }
 a { text-decoration: none; color: rgba(255, 255, 255, 0.7); } 
 .clearfix::after { content: ''; display: block; clear: both; }
 .icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
 
 .topNavBar { color: rgba(255, 255, 255, 0.7);padding: 20px 0px; position: fixed; top: 0; left: 0; width: 100%; transition: all 0.5s linear;}
-.topNavBar.sticky{ color:rgba(0, 0, 0, 0.555) ;background-color: #9918d5; z-index: 1;padding: 12px 0px; box-shadow: 0px 0px 10px  rgba(88, 88, 88, 0.712);}
-.topNavBar-inner { padding: 0 17px; }
-.topNavBar .logo { color: #9a9da2; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 30px; font-weight: bold; }
+.topNavBar.sticky{ color:rgb(58, 57, 57) ;background-color: #9918d5; z-index: 1;padding: 12px 0px; box-shadow: 0px 0px 10px  rgba(88, 88, 88, 0.712);}
+.topNavBar-inner { padding: 0 17px; } .topNavBar .logo { color: #9a9da2; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 30px; font-weight: bold; }
 .topNavBar .logo .ji { color: #9974f0; padding-right: 4px; }
 
-.topNavBar nav ul { margin: 0; padding-top: 14px; list-style-type: none; }
-.topNavBar nav ul li { float: left; margin-left: 17px; margin-right: 17px; }
-.topNavBar nav ul li a { font-size: 13px; font-weight: bold; color: inherit; border-bottom: 3px solid transparent; display: block; /* li将a包裹时会产生包裹不全的情况，使用block可以解决 */ }
-.topNavBar nav ul li a:hover { border-bottom: 3px solid red; }
+.topNavBar nav ul {  padding-top: 14px; list-style-type: none; }
+.topNavBar nav ul li { float: left; margin-left: 17px; margin-right: 17px; position: relative;}
+.topNavBar nav ul li a { position: relative;font-size: 13px; font-weight: bold; color: inherit; border-bottom: 3px solid transparent; display: block; /* li将a包裹时会产生包裹不全的情况，使用block可以解决 */ }
+.topNavBar nav ul li.active a::after 
+{ content: ''; display: block; position: absolute; top: 100%; left: 0; width: 100%; height: 3px; background: white; animation: slidein 0.75s; }
+@keyframes slidein { 0%{ width: 0; } 100%{ width: 100%; } }
+
+.topNavBar .submeun { display: none; }
+.topNavBar nav ul li.active ul.submeun{padding: 10px 0px; display: block; position: absolute; right: 0; top: 100%; background: #7c76da; color: #3d4451; box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); animation: subslidein 0.75s; } @keyframes subslidein { 0% { transform: translateY(-10%); opacity: 0; } 100% { transform: translateY(0); opacity: 100%; } }
+.topNavBar nav ul li.active ul.submeun li{ cursor  : url(https://i.loli.net/2020/02/24/Yl78pI9aZHbyhuD.gif) 2 32, auto; }
 
 .banner { height: 515px; background-image: url(https://i.loli.net/2020/02/26/hOn5rpAwSulENxW.png); background-position: center center; background-size: cover; }
 .banner .mask { height: 515px; background-color: rgba(77, 72, 110, 0.6); /* 遮罩效果：添加颜色滤镜lol */ }
@@ -39,8 +44,8 @@ dd { width: 50%; color: grey; }
 .myCard svg { vertical-align: top; width: 30px; height: 30px; color: white; }
 
 .myCardDownload { color: black; text-align: center; margin: 88px 0px; }
-.myCardDownload a { background-color: aliceblue; display: inline-block; color: #3d4451 !important; border: 1px solid #cbcdcf; border-radius: 15px; box-shadow: none; padding: 20px 50px; letter-spacing: 0.05em; transition: all 0.5s linear; }
-.myCardDownload a:hover { opacity: 0.5; padding: 20px 48px; background-color: #fffeff; box-shadow: 0 0px 80px 0 rgba(255, 255, 255, 0.18); transition: all 0.28s linear; }
+.myCardDownload a { background-color: aliceblue; display: inline-block; color: #3d4451 !important; border: 1px solid #cbcdcf; border-radius: 15px; box-shadow: none; padding: 20px 50px; letter-spacing: 0.05em; transition: all 0.2s linear; }
+.myCardDownload a:hover { opacity: 0.5; padding: 20px 48px; background-color: #fffeff; box-shadow: 0 0px 80px 0 rgba(255, 255, 255, 0.18); }
 
 .skills .skillsInner { display: block; max-width: 950px; margin-left: auto; margin-right: auto; }
 .skills .skillsInner>h2 { text-align: center; font-size: 35px; padding: 50px; }
@@ -51,7 +56,7 @@ dd { width: 50%; color: grey; }
 
 .linesBottom { display: block; position: absolute; border-radius: 8px; width: 100%; border: 2px solid rgba(31, 6, 31, 0.609); }
 
-#site-loading{  z-index: 1; position: fixed; top: 0; left: 0; right: 0; bottom:0; width: 100%; height: 100%; background: white ; }
+#site-loading{  z-index: 2; position: fixed; top: 0; left: 0; right: 0; bottom:0; width: 100%; height: 100%; background: white ; }
 #site-loading > .loading { width: 75px; height: 75px; border: 1px solid transparent; box-shadow: 0px 0px 15px 5px purple; border-radius: 50%; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; margin: auto; }
 #site-loading >.radio::before, .radio::after { width:0px;height:0px;content: ''; position: absolute; border-radius: 50%; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; margin: auto; animation: s 1.5s ease-in-out infinite; background: radial-gradient(yellow, green, cyan, blue, red); }
 #site-loading >.radio::after { background: radial-gradient(violet, blue, cyan, green, red, ); animation-delay: 0.75s; }
