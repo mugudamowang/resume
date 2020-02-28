@@ -20,22 +20,22 @@
             </a>
             <nav style='float: right;'>
                 <ul id ='navBarul' class="clearfix">
-                    <li><a href="#">关 于</a></li>
-                    <li><a href="#">技 能</a></li>
-                    <li><a href="#">经 历</a></li>
-                    <li><a href="#">薪 资</a></li>
-                    <li> <a href="#">博 客</a>
+                    <li><a href="#about">关 于</a></li>
+                    <li><a href="#skills">技 能</a></li>
+                    <li><a href="#experien">经 历</a></li>
+                    <li><a href="#salary">薪 资</a></li>
+                    <li> <a href="#blog">博 客</a>
                         <ul class="submeun">
                             <li>zhihu</li>
                             <li>bukun</li>
                             <li>github</li>
                         </ul>
                     </li>
-                    <li><a href="#">日 历</a></li>
-                    <li><a href="#">联 系</a></li>
-                    <li><a href="#">其 他</a></li>
+                    <li><a href="#date">日 历</a></li>
+                    <li><a href="#connect">联 系</a></li>
+                    <li><a href="#others">其 他</a></li>
                     <li>
-                        <a href="#">项 目</a>
+                        <a href="#projects">项 目</a>
                         <ul class="submeun">
                             <li>BlackBoard</li>
                             <li>Navi</li>
@@ -52,7 +52,7 @@
     </div>
 
     <main>
-        <div class="myCard">
+        <div  id = 'about' class="myCard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
                     <img src="https://i.loli.net/2020/02/26/jhWAgUF1t49Hrp7.jpg" height="350px" alt="avatar">
@@ -100,9 +100,9 @@
         </div>
     </main>
 
-    <section class="skills">
+    <section  class="skills">
         <div class="skillsInner">
-            <h2>SKILLS</h2>
+            <h2 id= 'skills'>SKILLS</h2>
             <div class="skillsCard">
                 <dl class="clearfix">
                     <dt>Html 5 &amp; CSS 3<span class="linesBottom"></span><span class="lines"
@@ -117,7 +117,7 @@
         </div>
     </section>
 
-    <section>
+    <section id= 'projects'>
         <h2>Portfolio</h2>
         <nav>
             <ol>
@@ -153,13 +153,21 @@
             }
             navBarTargetList[i].onmouseleave = function(e){
                 e.currentTarget.classList.remove('active')
-            }
-            
+            }    
         }
 
-        
+        let loadcateTargets =document.querySelectorAll('#topNavBar #navBarul > li > a' )
+        for(let i = 0; i <loadcateTargets.length; i++){
+            loadcateTargets[i].onclick = function(e){
+                e.preventDefault()
+                let href = e.currentTarget.getAttribute('href')
 
-
+                if(document.querySelector(href)){
+                let top = document.querySelector(href).offsetTop
+                window.scrollTo(0,top-80)
+            }
+            }
+        }
     </script>
 </body>
 
