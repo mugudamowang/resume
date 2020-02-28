@@ -1,6 +1,7 @@
 body { font-family: Arial, Helvetica, sans-serif;background-color: #28292e; color: grey; margin: 0px; }
 main { margin-top: -320px; }
 h1, h2, h3, h4, h5, hr, p ,li, ul{ padding: 0px; margin: 0px; }
+h2 { text-align: center; font-size: 35px; padding: 50px; }
 a { text-decoration: none; color: rgba(255, 255, 255, 0.7); } 
 .clearfix::after { content: ''; display: block; clear: both; }
 .icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
@@ -48,13 +49,31 @@ dd { width: 50%; color: grey; }
 .myCardDownload a:hover { opacity: 0.5; padding: 20px 48px; background-color: #fffeff; box-shadow: 0 0px 80px 0 rgba(255, 255, 255, 0.18); }
 
 .skills .skillsInner { display: block; max-width: 950px; margin-left: auto; margin-right: auto; }
-.skills .skillsInner>h2 { text-align: center; font-size: 35px; padding: 50px; }
-.skills .skillsCard { border-radius: 5px; padding: 10px 25px; background-color: #35363b; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
+.skills .skillsCard { border-radius: 5px; padding: 15px 25px;margin-bottom: 100px; background-color: #35363b; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
 .skills .skillsCard dt { font-size: medium; width: 38%; margin: 20px 50px; position: relative; }
-
 .skills .skillsCard   dl  .lines { display: block; position: absolute; border-radius: 5px; border: 2px solid rgb(211, 19, 211); }
-
 .linesBottom { display: block; position: absolute; border-radius: 8px; width: 100%; border: 2px solid rgba(31, 6, 31, 0.609); }
+
+.projects{ display: block; max-width: 950px; margin-left: auto; margin-right: auto; }
+.projects nav {display:table;margin:0 auto;}
+.projects nav .horizontalList { /* min-width: 696px; */ position: relative; padding:0 ; margin: 0 auto; list-style: none; }
+.projects nav .horizontalList li{ display: inline; margin: 0px 20px; font-size: 14px; }
+
+.projects div{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.projects .big { float: left; border: 2px solid #3e206d; padding: 20px; margin: 0 auto; }
+.projects .big img{ width: 500px; }
+
+.projects .small{ float: right; border: 2px solid #3e206d;  }
+.projects .small img{
+    padding: 20px; margin: 0 auto;
+    border: 2px solid #3e206d;
+    width: 250px;
+    height: 175px;
+}
+
 
 #site-loading{  z-index: 2; position: fixed; top: 0; left: 0; right: 0; bottom:0; width: 100%; height: 100%; background: white ; }
 #site-loading > .loading { width: 75px; height: 75px; border: 1px solid transparent; box-shadow: 0px 0px 15px 5px purple; border-radius: 50%; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; margin: auto; }
