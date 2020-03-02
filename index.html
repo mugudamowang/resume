@@ -177,7 +177,7 @@
                 let currentTop = window .scrollY
                 let TargetTop = 0
                 if(document.querySelector(href)){
-                    TargetTop = document.querySelector(href).offsetTop
+                    TargetTop = document.querySelector(href).offsetTop-100
                 }
                 let times = Math.abs(TargetTop-currentTop)
                 if (times>1000){
