@@ -2,10 +2,12 @@
 <html>
 
 <head>
-    
+
     <title>this is my cv</title>
     <link rel="stylesheet" href="style.css">
     <script src="//at.alicdn.com/t/font_1637235_2lfaz92j8h2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+    <!-- -- 注意版本号!!!新版已改版会不兼容 - -->
 </head>
 
 <body>
@@ -13,13 +15,13 @@
         <div class="radio"></div>
         <img class='loading' src="https://i.loli.net/2020/02/26/ZbX25CoDWj7yzIt.gif" />
     </div>
-    <div id = 'topNavBar' class="topNavBar">
+    <div id='topNavBar' class="topNavBar">
         <div class="topNavBar-inner" clearfix>
             <a class="logo" href="#" alt="logo" style="float: left">
                 <span class="ji">JI</span><span>beauty</span>
             </a>
             <nav style='float: right;'>
-                <ul id ='navBarul' class="clearfix">
+                <ul id='navBarul' class="clearfix">
                     <li><a href="#about">关 于</a></li>
                     <li><a href="#skills">技 能</a></li>
                     <li><a href="#experien">经 历</a></li>
@@ -52,7 +54,7 @@
     </div>
 
     <main>
-        <div  id = 'about' class="myCard">
+        <div id='about' class="myCard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
                     <img src="https://i.loli.net/2020/02/26/jhWAgUF1t49Hrp7.jpg" height="350px" alt="avatar">
@@ -100,9 +102,9 @@
         </div>
     </main>
 
-    <section id= 'skills' class="skills">
+    <section id='skills' class="skills">
         <div class="skillsInner">
-            <h2 >SKILLS</h2>
+            <h2>SKILLS</h2>
             <div class="skillsCard">
                 <dl class="clearfix">
                     <dt>Html 5 &amp; CSS 3<span class="linesBottom"></span><span class="lines"
@@ -117,7 +119,7 @@
         </div>
     </section>
 
-    <section class="projects" id= 'projects'>
+    <section class="projects" id='projects'>
         <h2>Portfolio</h2>
         <nav>
             <ol class="horizontalList">
@@ -127,52 +129,74 @@
             </ol>
         </nav>
         <div class="clearfix">
-            <div class="big"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582883836305&di=a54c03b685cfea874c96d293b789b13e&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20190514%2Fa4e470afdb1b459bb5832e3fa428e034.jpeg"></div>
+            <div class="big"><img
+                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582883836305&di=a54c03b685cfea874c96d293b789b13e&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20190514%2Fa4e470afdb1b459bb5832e3fa428e034.jpeg">
+            </div>
             <div class="small">
                 <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=604536987,228084764&fm=26&gp=0.jpg">
                 <br>
-                <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3439838255,2909957904&fm=26&gp=0.jpg">
+                <img
+                    src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3439838255,2909957904&fm=26&gp=0.jpg">
             </div>
         </div>
     </section>
     <foot>mugu</foot>
 
     <script>
-        setTimeout(function(){
+        setTimeout(function () {
             var element = document.getElementById('site-loading');
             element.parentNode.removeChild(element);
-        },2000)
-        
-        window.onscroll = function(){
-            if(window.scrollY > 0){
+        }, 2000)
+
+        window.onscroll = function () {
+            if (window.scrollY > 0) {
                 topNavBar.classList.add('sticky')
-            }else{
+            } else {
                 topNavBar.classList.remove('sticky')
             }
         }
 
         let navBarTargetList = document.querySelectorAll('#navBarul > li')
-        for (let  i = 0 ; i < navBarTargetList.length ; i++){
-            navBarTargetList[i].onmouseenter = function(e){
+        for (let i = 0; i < navBarTargetList.length; i++) {
+            navBarTargetList[i].onmouseenter = function (e) {
                 e.currentTarget.classList.add('active')
             }
-            navBarTargetList[i].onmouseleave = function(e){
+            navBarTargetList[i].onmouseleave = function (e) {
                 e.currentTarget.classList.remove('active')
-            }    
+            }
         }
 
-        let loadcateTargets =document.querySelectorAll('#topNavBar #navBarul > li > a' )
-        for(let i = 0; i <loadcateTargets.length; i++){
-            loadcateTargets[i].onclick = function(e){
+
+        let loadcateTargets = document.querySelectorAll('#topNavBar #navBarul > li > a')
+        function animate(time) { requestAnimationFrame(animate); TWEEN.update(time); }
+        requestAnimationFrame(animate)
+        for (let i = 0; i < loadcateTargets.length; i++) {
+            loadcateTargets[i].onclick = function (e) {
                 e.preventDefault()
                 let href = e.currentTarget.getAttribute('href')
-
+                let currentTop = window .scrollY
+                let TargetTop = 0
                 if(document.querySelector(href)){
-                let top = document.querySelector(href).offsetTop
-                window.scrollTo(0,top-80)
-            }
+                    TargetTop = document.querySelector(href).offsetTop
+                }
+                let times = Math.abs(TargetTop-currentTop)
+                if (times>1000){
+                    times= 1000
+                }
+                const coords = { y: currentTop }
+                const tween = new TWEEN.Tween(coords)
+                .to({ y: TargetTop }, times)
+                .easing(TWEEN.Easing.Quadratic.Out)
+                .onUpdate(() => { window.scrollTo(0,coords.y) })
+                .start()
             }
         }
+
+
+
+
+        
+        
     </script>
 </body>
 
