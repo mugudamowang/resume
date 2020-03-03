@@ -22,12 +22,10 @@ window.onscroll = function () {
         let highLightId = highLightTargets[index].id
         let highlightNav = document.querySelector('a[href ="#'+ highLightId+'"]')
         let brothersNav = highlightNav.parentNode.parentNode.children
-        this.console.log()
-        for( let i =0 ;i< brothersNav.length;i++){
-            brothersNav[i].remove('highlight')
+        for( let i =0 ;i< brothersNav.length-1;i++){
+            brothersNav[i].classList.remove('highlight')
         }
-        highlightNav.classList.add('highlight')
-
+        highlightNav.parentNode.classList.add('highlight')
     } else {
         topNavBar.classList.remove('sticky')
 

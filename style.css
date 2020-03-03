@@ -14,7 +14,9 @@ a { text-decoration: none; color: rgba(255, 255, 255, 0.7); }
 .topNavBar nav ul {  padding-top: 14px; list-style-type: none; }
 .topNavBar nav ul li { float: left; margin-left: 17px; margin-right: 17px; position: relative;}
 .topNavBar nav ul li a { position: relative;font-size: 13px; font-weight: bold; color: inherit; border-bottom: 3px solid transparent; display: block; /* li将a包裹时会产生包裹不全的情况，使用block可以解决 */ }
-.topNavBar nav ul li a.highlight, 
+.topNavBar nav ul li.highlight{
+    background-color: wheat;
+}
 .topNavBar nav ul li.active a::after 
 { content: ''; display: block; position: absolute; top: 100%; left: 0; width: 100%; height: 3px; background: rgb(179, 65, 245); animation: slidein 0.75s; }
 @keyframes slidein { 0%{ width: 0; } 100%{ width: 100%; } }
