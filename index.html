@@ -11,10 +11,11 @@
 </head>
 
 <body>
-    <div id="site-loading">
+    <!-- <div id="site-loading">
         <div class="radio"></div>
         <img class='loading' src="https://i.loli.net/2020/02/26/ZbX25CoDWj7yzIt.gif" />
-    </div>
+    </div> -->
+
     <div id='topNavBar' class="topNavBar">
         <div class="topNavBar-inner" clearfix>
             <a class="logo" href="#" alt="logo" style="float: left">
@@ -54,7 +55,7 @@
     </div>
 
     <main>
-        <div id='about' class="myCard">
+        <div data-highlight id='about' class="myCard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
                     <img src="https://i.loli.net/2020/02/26/jhWAgUF1t49Hrp7.jpg" height="350px" alt="avatar">
@@ -102,7 +103,7 @@
         </div>
     </main>
 
-    <section id='skills' class="skills">
+    <section data-highlight  id='skills' class="skills">
         <div class="skillsInner">
             <h2>SKILLS</h2>
             <div class="skillsCard">
@@ -119,7 +120,7 @@
         </div>
     </section>
 
-    <section class="projects" id='projects'>
+    <section data-highlight class="projects" id='projects'>
         <h2>Portfolio</h2>
         <nav>
             <ol class="horizontalList">
@@ -140,64 +141,10 @@
             </div>
         </div>
     </section>
+
     <foot>mugu</foot>
-
-    <script>
-        setTimeout(function () {
-            var element = document.getElementById('site-loading');
-            element.parentNode.removeChild(element);
-        }, 2000)
-
-        window.onscroll = function () {
-            if (window.scrollY > 0) {
-                topNavBar.classList.add('sticky')
-            } else {
-                topNavBar.classList.remove('sticky')
-            }
-        }
-
-        let navBarTargetList = document.querySelectorAll('#navBarul > li')
-        for (let i = 0; i < navBarTargetList.length; i++) {
-            navBarTargetList[i].onmouseenter = function (e) {
-                e.currentTarget.classList.add('active')
-            }
-            navBarTargetList[i].onmouseleave = function (e) {
-                e.currentTarget.classList.remove('active')
-            }
-        }
-
-
-        let loadcateTargets = document.querySelectorAll('#topNavBar #navBarul > li > a')
-        function animate(time) { requestAnimationFrame(animate); TWEEN.update(time); }
-        requestAnimationFrame(animate)
-        for (let i = 0; i < loadcateTargets.length; i++) {
-            loadcateTargets[i].onclick = function (e) {
-                e.preventDefault()
-                let href = e.currentTarget.getAttribute('href')
-                let currentTop = window .scrollY
-                let TargetTop = 0
-                if(document.querySelector(href)){
-                    TargetTop = document.querySelector(href).offsetTop-100
-                }
-                let times = Math.abs(TargetTop-currentTop)
-                if (times>1000){
-                    times= 1000
-                }
-                const coords = { y: currentTop }
-                const tween = new TWEEN.Tween(coords)
-                .to({ y: TargetTop }, times)
-                .easing(TWEEN.Easing.Quadratic.Out)
-                .onUpdate(() => { window.scrollTo(0,coords.y) })
-                .start()
-            }
-        }
-
-
-
-
-        
-        
-    </script>
+    <script src="./main.js">
+</script>
 </body>
 
 </html>

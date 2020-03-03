@@ -7,15 +7,16 @@ a { text-decoration: none; color: rgba(255, 255, 255, 0.7); }
 .icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
 
 .topNavBar { color: rgba(255, 255, 255, 0.7);padding: 20px 0px; position: fixed; top: 0; left: 0; width: 100%; transition: all 0.5s linear;}
-.topNavBar.sticky{ color:rgb(58, 57, 57) ;background-color: #9918d5; z-index: 1;padding: 12px 0px; box-shadow: 0px 0px 10px  rgba(88, 88, 88, 0.712);}
+.topNavBar.sticky{ color:#9a9da2 ;background-color: #202024; z-index: 1;padding: 12px 0px; box-shadow: 0px 0px 10px  rgba(88, 88, 88, 0.712);}
 .topNavBar-inner { padding: 0 17px; } .topNavBar .logo { color: #9a9da2; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 30px; font-weight: bold; }
 .topNavBar .logo .ji { color: #9974f0; padding-right: 4px; }
 
 .topNavBar nav ul {  padding-top: 14px; list-style-type: none; }
 .topNavBar nav ul li { float: left; margin-left: 17px; margin-right: 17px; position: relative;}
 .topNavBar nav ul li a { position: relative;font-size: 13px; font-weight: bold; color: inherit; border-bottom: 3px solid transparent; display: block; /* li将a包裹时会产生包裹不全的情况，使用block可以解决 */ }
+.topNavBar nav ul li a.highlight, 
 .topNavBar nav ul li.active a::after 
-{ content: ''; display: block; position: absolute; top: 100%; left: 0; width: 100%; height: 3px; background: white; animation: slidein 0.75s; }
+{ content: ''; display: block; position: absolute; top: 100%; left: 0; width: 100%; height: 3px; background: rgb(179, 65, 245); animation: slidein 0.75s; }
 @keyframes slidein { 0%{ width: 0; } 100%{ width: 100%; } }
 
 .topNavBar .submeun { display: none; }
@@ -39,7 +40,7 @@ a { text-decoration: none; color: rgba(255, 255, 255, 0.7); }
 dt { width: 30%; font-weight: bold; font-size: 12px; color: gainsboro; }
 dd { width: 50%; color: grey; }
 
-.myCard footer.media { background-color: #9818d6; text-align: center; }
+.myCard footer.media {  border-radius: 0 0 5px 5px ;background-color: #9818d6; text-align: center; }
 .myCard footer.media>a { margin: 16px 16px; display: inline-block; border: transparent 8px solid; border-radius: 50%; transition: all 0.3s ease-out; }
 .myCard footer.media>a:hover { border: #3e206d 8px solid; border-radius: 50%; background-color: #3e206d; transition: all 0.25s ease-in; }
 .myCard svg { vertical-align: top; width: 30px; height: 30px; color: white; }
@@ -54,7 +55,7 @@ dd { width: 50%; color: grey; }
 .skills .skillsCard   dl  .lines { display: block; position: absolute; border-radius: 5px; border: 2px solid rgb(211, 19, 211); }
 .linesBottom { display: block; position: absolute; border-radius: 8px; width: 100%; border: 2px solid rgba(31, 6, 31, 0.609); }
 
-.projects{ display: block; max-width: 950px; margin-left: auto; margin-right: auto; }
+.projects{ display: block; max-width: 950px; margin: 20px auto }
 .projects nav {display:table;margin:0 auto;}
 .projects nav .horizontalList { /* min-width: 696px; */ position: relative; padding:0 ; margin: 0 auto; list-style: none; }
 .projects nav .horizontalList li{ display: inline; margin: 0px 20px; font-size: 14px; }
@@ -74,6 +75,16 @@ dd { width: 50%; color: grey; }
     height: 175px;
 }
 
+[data-highlight]{
+    opacity: 0.2;
+    filter: blur(2px);
+    transition: all 0.4s ease-in-out;
+}
+[data-highlight].slideinSoft{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(-40px);
+}
 
 #site-loading{  z-index: 2; position: fixed; top: 0; left: 0; right: 0; bottom:0; width: 100%; height: 100%; background: white ; }
 #site-loading > .loading { width: 75px; height: 75px; border: 1px solid transparent; box-shadow: 0px 0px 15px 5px purple; border-radius: 50%; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; margin: auto; }
