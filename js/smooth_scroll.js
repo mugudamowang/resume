@@ -1,6 +1,5 @@
 !function () {
     var view = document.querySelector('#navBarul')
-    view.style.border = "1px solid red"
 
     var controller = {
         view: null,

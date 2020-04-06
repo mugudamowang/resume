@@ -1,7 +1,5 @@
 !function () {
     var view = document.querySelector('#slidesView')
-    view.style.border = "1px solid green"
-
     var controller = {
         view: null,
         swiper: null,
