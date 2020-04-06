@@ -129,8 +129,8 @@
                     <!-- Slides -->
                     <div class="swiper-slide"><a href="https://www.bukun.top/" target="_blank"><img
                                 src="https://i.loli.net/2020/04/05/oEvwHWmxSlXKf2Z.png"></a></div>
-                    <div class="swiper-slide"><a href="https://sm.ms/image/qprZ1bXQTWzmfE5" target="_blank"><img
-                                src="https://i.loli.net/2020/04/05/qprZ1bXQTWzmfE5.gif"></a></div>
+                    <div class="swiper-slide"><a href="https://sm.ms/image/rPqyjdNukcAh4IY" target="_blank"><img
+                                src="https://i.loli.net/2020/04/06/rPqyjdNukcAh4IY.png"></a></div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
@@ -138,13 +138,54 @@
             </div>
         </div>
     </section>
+    <style>
+        #meaBoard {
+            text-align: center;
+        }
+
+        #meaBoard>ol>li {
+            max-width: 800px;
+            margin: 0 auto;
+            list-style: none;
+            border-width: 10px;
+            padding: 20px 0px;
+            background-color: #393b42;
+            border-bottom: 1.5px dotted grey;
+            position: relative;
+        }
+        #meaBoard input[name='id']{
+            width: 100px;
+        }
+        #meaBoard>ol>li>sub{
+            position: absolute;
+            left: 0px;
+            margin: 0px 10px;
+        }
+    </style>
+    <section id="meaBoard">
+        <hr>
+        <h2>Message Board</h2>
+        <ol id="showMessage"></ol>
+        <br>
+        <form id='postMessage'>
+            <input type="text" name="name" placeholder="名">
+            <input type="text" name="content" placeholder="文">
+            <input type="submit" name="submitBtn" value="提交">
+        </form>
+        <br>
+        <hr>
+    </section>
+
     <div class="foot"></div>
     <foot>mugu</foot>
     <script src="./js/pre_loading.js"></script>
     <script src="./js/smooth_scroll.js"></script>
     <script src="./js/sub_menu.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.5.2/dist/av-min.js"></script>
+    <script src="./js/meaBoard.js"></script>
     <script src="https://cdn.bootcss.com/Swiper/4.5.1/js/swiper.min.js"></script>
     <script src="./js/init_swiper.js">
     </script>
 </body>
+
 </html>
