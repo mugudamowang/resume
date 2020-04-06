@@ -1,15 +1,19 @@
 !function () {
-    var mySwiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+    var view = document.querySelector('#slidesView')
+    view.style.border = "1px solid green"
+
+    var controller = {
+        view: null,
+        swiper: null,
+        swiperOptions: { direction: 'horizontal', loop: true, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', }, pagination: { el: '.swiper-pagination', dynamicBullets: true, }, },
+        init: function (view) {
+            this.view = view
+            this.initSwiper()
         },
-        pagination: {
-            el: '.swiper-pagination',
-            dynamicBullets: true,
-        },
-    })
+        initSwiper: function () {
+            this.swiper = new Swiper(this.view.querySelector('.swiper-container'), this.swiperOptions)
+        }
+    }
+
+    controller.init.call(controller, view)
 }.call()
